@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
     has_many :post_images, dependent: :destroy #たくさんのpost_image なおかつuserを削除したらpost_imageも削除
     has_many :post_comments, dependent: :destroy #たくさんのpost_comment 　なおかつuserを削除したらpost_imageも削除
+    has_many :favorite, dependent: :destroy
     
     has_one_attached :profile_image
 
